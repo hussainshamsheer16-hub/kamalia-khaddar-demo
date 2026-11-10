@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#493326" />
+  <title>Kamalia Khaddar | Tradition Woven in Every Thread</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { cocoa:'#493326', sand:'#D9C6A5', ivory:'#F8F5EF', olive:'#73734B', ink:'#211914' },
+        fontFamily: { display:['Georgia','serif'], sans:['Arial','sans-serif'] },
+        boxShadow: { soft:'0 16px 50px rgba(48,35,25,.10)' }
+      }}
+    }
+  </script>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-ivory text-ink">
+  <div class="bg-cocoa text-white text-center text-xs tracking-[.18em] py-2 px-4">FREE DELIVERY ON ORDERS OVER PKR 8,000 · WINTER COLLECTION 2026</div>
+  <header class="sticky top-0 z-40 bg-ivory/95 backdrop-blur border-b border-[#e8dfd2]">
+    <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between">
+      <button class="md:hidden text-2xl" id="menuToggle" aria-label="Open menu">☰</button>
+      <a href="#" class="leading-none text-center">
+        <span class="block font-display text-2xl md:text-3xl tracking-[.12em] text-cocoa">KAMALIA</span>
+        <span class="block text-[9px] tracking-[.42em] mt-1 text-olive">KHADDAR</span>
+      </a>
+      <nav id="mainNav" class="hidden md:flex items-center gap-8 text-[11px] tracking-[.16em] uppercase">
+        <a href="#home" class="navlink">Home</a><a href="#shop" class="navlink">Shop</a><a href="#heritage" class="navlink">Our Story</a><a href="#journal" class="navlink">Journal</a><a href="#contact" class="navlink">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4 text-sm">
+        <button id="searchToggle" aria-label="Search" class="header-icon" title="Search">⌕</button>
+        <a href="admin.html" class="admin-nav-btn" aria-label="Open admin dashboard"><span>▦</span> Admin</a>
+        <button id="cartBtn" class="header-icon relative" aria-label="Shopping cart" title="Shopping cart"><svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span id="cartCount" class="cart-count">0</span></button>
+      </div>
+    </div>
+    <div id="mobileNav" class="hidden md:hidden border-t border-[#e8dfd2] px-6 py-4 bg-ivory">
+      <div class="grid gap-4 text-xs uppercase tracking-widest"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#heritage">Our Story</a><a href="#journal">Journal</a><a href="#contact">Contact</a></div>
+    </div>
+    <div id="searchPanel" class="hidden border-t border-[#e8dfd2] px-5 py-4"><div class="max-w-3xl mx-auto flex gap-2"><input id="searchInput" class="field flex-1" placeholder="Search khaddar, kurta, waistcoat..." /><button id="searchGo" class="btn-dark">Search</button></div></div>
+  </header>
+
+  <main>
+    <section id="home" class="hero hero-banner" aria-label="Featured collections">
+      <div class="hero-carousel" id="heroCarousel">
+        <div class="hero-slide is-active" aria-hidden="false">
+          <a class="hero-banner-link" href="#shop" aria-label="Shop the Kamalia Khaddar collection">
+            <img class="hero-banner-image" src="assets/hero-kamalia-banner.png" alt="Kamalia Khaddar. Tradition, comfort, style. Pure Khaddar for a timeless look. Shop now." />
+          </a>
+        </div>
+        <div class="hero-slide" aria-hidden="true">
+          <a class="hero-banner-link" href="#shop" aria-label="Shop the unstitched suits collection">
+            <img class="hero-banner-image" src="assets/hero-unstitched-banner.png" alt="Fashion Hub unstitched suits. Premium quality, trendy designs, and endless possibilities. Shop now." />
+          </a>
+        </div>
+        <button class="hero-carousel-control hero-carousel-prev" type="button" aria-label="Show previous banner">‹</button>
+        <button class="hero-carousel-control hero-carousel-next" type="button" aria-label="Show next banner">›</button>
+        <div class="hero-carousel-dots" aria-label="Choose a banner">
+          <button class="hero-carousel-dot is-active" type="button" aria-label="Show banner 1" aria-current="true"></button>
+          <button class="hero-carousel-dot" type="button" aria-label="Show banner 2" aria-current="false"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-5 py-16 md:py-20">
+      <div class="flex items-end justify-between mb-8"><div><p class="eyebrow">Discover your style</p><h2 class="section-title">Shop by category</h2></div><a href="#shop" class="text-xs underline underline-offset-4">View all</a></div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+        <a class="category-card group" href="#shop" data-category="Kurta Shalwar"><img src="assets/kurta-shalwar-category.png" alt="Burgundy kurta shalwar displayed on a mannequin"/><span>Kurta Shalwar <b>↗</b></span></a>
+        <a class="category-card group" href="#shop" data-category="Unstitched"><img src="assets/unstitched-fabric.png" alt="Folded unstitched fabrics in a range of colors"/><span>Unstitched <b>↗</b></span></a>
+        <a class="category-card group" href="#shop" data-category="Waistcoats"><img src="assets/waistcoat-category.png" alt="Black embroidered waistcoat on a mannequin"/><span>Waistcoats <b>↗</b></span></a>
+      </div>
+    </section>
+
+    <section id="shop" class="bg-[#eee8de] py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center mb-10"><p class="eyebrow">Made to be remembered</p><h2 class="section-title">Explore the collection</h2><p class="text-sm text-stone-600 mt-3">Easy-to-wear essentials, made to feel special.</p></div>
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-7">
+          <div class="flex gap-2 flex-wrap" id="filters"><button class="filter active" data-filter="All">All pieces</button><button class="filter" data-filter="Kurta Shalwar">Kurta Shalwar</button><button class="filter" data-filter="Unstitched">Unstitched</button><button class="filter" data-filter="Waistcoats">Waistcoats</button></div>
+          <select id="sortSelect" class="field w-auto"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select>
+        </div>
+        <div id="productGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"></div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-5 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div class="relative"><img class="w-full aspect-[4/5] object-cover" src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1000&q=85" alt="Traditional menswear editorial"/><div class="absolute -bottom-5 -right-3 bg-sand p-5 md:p-7 max-w-[190px]"><p class="font-display text-2xl">Made with meaning.</p><p class="text-xs mt-2">Craft rooted in heritage.</p></div></div>
+      <div id="heritage" class="md:pl-10"><p class="eyebrow">The Kamalia story</p><h2 class="section-title leading-tight">A legacy woven<br/><em>into every thread.</em></h2><p class="text-sm leading-7 text-stone-600 mt-6">Inspired by Pakistan's rich textile traditions, Kamalia Khaddar brings together enduring craft, considered details and contemporary silhouettes. Each piece is designed to feel at home in your everyday wardrobe and special occasions alike.</p><p class="text-sm leading-7 text-stone-600 mt-3">Our demo collection celebrates the character of khaddar: its texture, warmth and unmistakable personality.</p><a href="#shop" class="btn-dark inline-flex mt-8">Discover the collection ↗</a></div>
+    </section>
+
+    <section class="bg-cocoa text-white py-16 md:py-20"><div class="max-w-7xl mx-auto px-5 text-center"><p class="eyebrow text-sand">The fabric of our identity</p><h2 class="font-display text-4xl md:text-5xl max-w-3xl mx-auto leading-tight">Not just what you wear.<br/><em class="text-sand">What you carry forward.</em></h2><div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-center"><div><div class="text-sand text-3xl">✳</div><h3 class="font-display text-xl mt-3">Rooted in heritage</h3><p class="text-white/60 text-xs mt-2">Traditional inspiration, thoughtfully reimagined.</p></div><div><div class="text-sand text-3xl">◇</div><h3 class="font-display text-xl mt-3">Considered quality</h3><p class="text-white/60 text-xs mt-2">Details and textures chosen with care.</p></div><div><div class="text-sand text-3xl">✧</div><h3 class="font-display text-xl mt-3">Made for living</h3><p class="text-white/60 text-xs mt-2">Versatile pieces for everyday and occasion.</p></div></div></div></section>
+
+    <section id="journal" class="max-w-7xl mx-auto px-5 py-16 md:py-20"><div class="flex justify-between items-end mb-8"><div><p class="eyebrow">Notes from Kamalia</p><h2 class="section-title">The journal</h2></div><span class="text-xs text-stone-500">STYLE · CRAFT · CULTURE</span></div><div class="grid md:grid-cols-2 gap-5"><article><img class="journal-img" src="assets/fabric-guide-journal.png" alt="Fabric guide swatches labeled with different textile fibers"/><p class="eyebrow mt-5">Fabric guide</p><h3 class="font-display text-2xl mt-2">Getting to know khaddar</h3><p class="text-sm text-stone-600 mt-2">A closer look at the texture that defines a season.</p></article><article><img class="journal-img" src="assets/tradition-meets-today.png" alt="Traditional shalwar kameez and coat color combinations"/><p class="eyebrow mt-5">Our inspiration</p><h3 class="font-display text-2xl mt-2">Tradition meets today</h3><p class="text-sm text-stone-600 mt-2">Celebrating heritage through a modern lens.</p></article></div></section>
+
+    <section class="bg-sand/50 py-14"><div class="max-w-3xl mx-auto px-5 text-center"><p class="eyebrow">Stay in the loop</p><h2 class="font-display text-3xl md:text-4xl">A little note from Kamalia.</h2><p class="text-sm text-stone-600 mt-3">Be first to hear about new arrivals, seasonal edits and stories from our world.</p><form id="newsletterForm" class="flex flex-col sm:flex-row gap-2 mt-7 max-w-lg mx-auto"><input required type="email" class="field flex-1 bg-white" placeholder="Your email address"/><button class="btn-dark">Subscribe</button></form><p id="newsletterMsg" class="text-xs mt-3"></p></div></section>
+  </main>
+
+  <section id="contact" class="contact-section">
+    <div class="max-w-7xl mx-auto px-5 py-16">
+      <div class="text-center mb-10"><p class="eyebrow">We would love to hear from you</p><h2 class="section-title">Visit or get in touch</h2><p class="text-sm text-stone-600 mt-3">Send us a message or find us in Sheikhupura, Punjab.</p></div>
+      <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+        <form id="contactForm" class="contact-card contact-form">
+          <div class="contact-form-heading"><p class="eyebrow">Contact our team</p><h3>How can we help?</h3><p>Share your details and we’ll be in touch about your enquiry.</p></div>
+          <label class="contact-field">Your name<input class="field" name="name" autocomplete="name" required placeholder="e.g. Ayesha Malik" /></label>
+          <label class="contact-field">Phone number<input class="field" name="phone" type="tel" autocomplete="tel" required placeholder="e.g. 03XX XXXXXXX" /></label>
+          <label class="contact-field contact-field-wide">Email address<input class="field" name="email" type="email" autocomplete="email" required placeholder="you@example.com" /></label>
+          <label class="contact-field contact-field-wide">Your message<textarea class="field" name="message" required minlength="10" rows="5" placeholder="Write your message here..."></textarea></label>
+          <button class="btn-dark contact-submit" type="submit">Send message <span aria-hidden="true">→</span></button>
+          <p id="contactMsg" class="contact-feedback" aria-live="polite"></p>
+          <p class="contact-demo-note">Demo store: enquiries are saved in this browser only.</p>
+        </form>
+        <div class="contact-details-card"><p class="eyebrow">Contact details</p><h3 class="font-display text-2xl mt-2">Kamalia Khaddar</h3><div class="contact-detail-row"><span>⌖</span><div><b>Location</b><p>Sheikhupura, Punjab, Pakistan</p></div></div><div class="contact-detail-row"><span>☎</span><div><b>Phone / WhatsApp</b><p>Business number to be added</p></div></div><div class="contact-detail-row"><span>✉</span><div><b>Email</b><p>Business email to be added</p></div></div><div class="map-card"><iframe title="Map showing Sheikhupura, Punjab, Pakistan" src="https://www.google.com/maps?q=Sheikhupura%2C%20Punjab%2C%20Pakistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-caption"><b>Kamalia Khaddar</b><span>Sheikhupura, Punjab, Pakistan</span><a href="https://www.google.com/maps/search/?api=1&query=Sheikhupura%2C+Punjab%2C+Pakistan" target="_blank" rel="noopener">Open in Google Maps ↗</a></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#211914] text-white pt-12 pb-7"><div class="max-w-7xl mx-auto px-5"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 pb-10"><div><div class="font-display text-2xl tracking-[.12em]">KAMALIA</div><div class="text-[9px] tracking-[.42em] text-sand mt-1">KHADDAR</div><p class="text-xs text-white/55 leading-6 mt-5 max-w-xs">Tradition woven in every thread. Thoughtful Pakistani menswear inspired by heritage.</p></div><div><h4 class="eyebrow text-sand">Explore</h4><div class="grid gap-3 text-xs text-white/65 mt-5"><a href="#shop">Shop all</a><a href="#shop">New arrivals</a><a href="#heritage">Our story</a><a href="#journal">Journal</a><a href="#contact">Contact</a></div></div><div><h4 class="eyebrow text-sand">Follow our story</h4><p class="text-xs text-white/55 mt-5">Follow Kamalia Khaddar for new collections and updates.</p><div class="social-links flex gap-3 mt-5"><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1Z"/></svg></a><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" class="fill-icon"/></svg></a><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11a4 4 0 1 1-4-4v4a0 0 0 1 0 0 0V3h4c.3 2.4 1.7 4 4 4v4c-1.6 0-3-.5-4-1.4"/></svg></a></div></div></div><div class="border-t border-white/15 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-[10px] text-white/45"><span>© 2026 Kamalia Khaddar. All rights reserved.</span><span>Designed with respect for tradition.</span></div></div></footer>
+
+  <!-- Cart drawer -->
+  <div id="overlay" class="overlay hidden"></div>
+  <aside id="cartDrawer" class="drawer"><div class="flex items-center justify-between border-b pb-5"><h3 class="font-display text-2xl">Your bag</h3><button class="closeDrawer text-2xl">×</button></div><div id="cartItems" class="py-5 space-y-4 flex-1 overflow-auto"></div><div class="border-t pt-5"><div class="flex justify-between text-sm mb-4"><span>Subtotal</span><b id="cartSubtotal">PKR 0</b></div><button id="checkoutBtn" class="btn-dark w-full">Continue to checkout</button><p class="text-[10px] text-stone-500 mt-3">Demo checkout only. No real payment is processed.</p></div></aside>
+
+  <!-- Product modal -->
+  <div id="productModal" class="modal hidden"><div class="modal-card"><button id="closeProduct" class="absolute right-4 top-3 text-2xl">×</button><div id="productModalContent"></div></div></div>
+  <!-- Checkout modal -->
+  <div id="checkoutModal" class="modal hidden"><div class="modal-card max-w-xl"><button class="closeCheckout absolute right-4 top-3 text-2xl">×</button><p class="eyebrow">Almost yours</p><h2 class="font-display text-3xl mb-5">Checkout</h2><form id="checkoutForm" class="grid sm:grid-cols-2 gap-3"><input class="field" required placeholder="Full name"/><input class="field" required placeholder="Phone number"/><input class="field" type="email" placeholder="Email address"/><input class="field" required placeholder="City"/><input class="field sm:col-span-2" required placeholder="Complete delivery address"/><select class="field sm:col-span-2"><option>Cash on Delivery</option><option>Online payment (demo only)</option></select><div class="sm:col-span-2 bg-[#f4efe7] p-3 text-xs text-stone-600">This is a frontend demonstration. Orders are saved only in this browser and no payment is taken.</div><button class="btn-dark sm:col-span-2">Place demo order</button></form><p id="checkoutMsg" class="text-sm mt-4"></p></div></div>
+
+  <a class="whatsapp-float" href="https://wa.me/?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20know%20about%20Kamalia%20Khaddar%20products." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a12 12 0 0 0-10.3 18.2L4 28l7-1.8A12 12 0 1 0 16 3Zm0 21.8a9.7 9.7 0 0 1-4.9-1.3l-.4-.2-4.1 1.1 1.1-4-.3-.4A9.8 9.8 0 1 1 16 24.8Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6s0-.4 0-.6-.7-1.7-1-2.3c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4 2.4 3.7 5.8 5.1c.8.3 1.4.5 1.9.6.8.3 1.6.2 2.2.1.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4s-.3-.2-.6-.4Z"/></svg></a>
+  <script src="backend.js"></script><script src="app.js"></script>
+</body>
+</html>
